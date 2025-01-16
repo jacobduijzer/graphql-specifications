@@ -1,0 +1,16 @@
+schema {
+  query: Queries
+}
+
+type Queries {
+  books: [Book!]!
+}
+
+type Book {
+  id: UUID!
+  title: String!
+  isbn: String!
+  author: String!
+}
+
+scalar UUID
