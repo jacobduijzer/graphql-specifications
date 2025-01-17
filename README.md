@@ -58,7 +58,7 @@ Ensure you have the following installed:
 
 The `CustomWebApplicationFactory` class is used to create a custom `WebApplicationFactory` for integration tests. This class is used to configure the test server with the required services and settings. It is also used to override registered services, in this case the `StockService`.
 
-https://github.com/jacobduijzer/graphql-specifications/blob/2da737cab91ecb711c024f934f127f97cb3c9c19/src/Bookstore.Specifications/CustomWebApplicationFactory.cs#L10
+https://github.com/jacobduijzer/graphql-specifications/blob/0c4f80febe83d566fa862920b5eefd2fc09f346a/src/Bookstore.Specifications/CustomWebApplicationFactory.cs#L10-L40
 
 ### Specifications
 
