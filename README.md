@@ -77,6 +77,18 @@ https://github.com/jacobduijzer/graphql-specifications/blob/0c4f80febe83d566fa86
 
 ### Specifications
 
+#### Login
+
+https://github.com/jacobduijzer/graphql-specifications/blob/04cf32d2b920167eef2f8944e7f9f623c0255411/src/Bookstore.Specifications/Login.feature#L1-L11
+
+#### Search for books
+
+https://github.com/jacobduijzer/graphql-specifications/blob/04cf32d2b920167eef2f8944e7f9f623c0255411/src/Bookstore.Specifications/SearchBooks.feature#L1-L22
+
+#### Add books
+
+https://github.com/jacobduijzer/graphql-specifications/blob/04cf32d2b920167eef2f8944e7f9f623c0255411/src/Bookstore.Specifications/AddBooks.feature#L1-L21
+
 ## Links
 
 - [HotChocolate Documentation](https://chillicream.com/docs/hotchocolate)
