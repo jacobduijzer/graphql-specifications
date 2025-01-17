@@ -1,6 +1,12 @@
 ﻿namespace Bookstore.Api;
 
-public class Queries(BookCatalogService books)
+public class Queries(BookCatalogService books, IdentityService identity)
 {
     public IEnumerable<Book> Books() => books.Books();
+
+    public LoginPayload Login(string email, string password)
+    {
+       var token = identity.Login(email, password);
+       return new LoginPayload(token);
+    }
 }

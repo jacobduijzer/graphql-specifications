@@ -19,22 +19,21 @@ namespace Bookstore.Specifications
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class SearchingForBooksFeature : object, Xunit.IClassFixture<SearchingForBooksFeature.FixtureData>, Xunit.IAsyncLifetime
+    public partial class HavingTheAbilityToLoginAsStoreOwnerOrAsCustomerFeature : object, Xunit.IClassFixture<HavingTheAbilityToLoginAsStoreOwnerOrAsCustomerFeature.FixtureData>, Xunit.IAsyncLifetime
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "Searching for books", ("As an avid reader\r\nI want to search for book information\r\nSo that I can find new " +
-                "books I want to read"), global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "Having the ability to login as store owner or as customer", null, global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "SearchBooks.feature"
+#line 1 "Login.feature"
 #line hidden
         
-        public SearchingForBooksFeature(SearchingForBooksFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public HavingTheAbilityToLoginAsStoreOwnerOrAsCustomerFeature(HavingTheAbilityToLoginAsStoreOwnerOrAsCustomerFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
         }
@@ -93,16 +92,16 @@ namespace Bookstore.Specifications
             await this.TestTearDownAsync();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Going through a list of books")]
-        [Xunit.TraitAttribute("FeatureTitle", "Searching for books")]
-        [Xunit.TraitAttribute("Description", "Going through a list of books")]
-        public async System.Threading.Tasks.Task GoingThroughAListOfBooks()
+        [Xunit.SkippableFactAttribute(DisplayName="Login as store owner")]
+        [Xunit.TraitAttribute("FeatureTitle", "Having the ability to login as store owner or as customer")]
+        [Xunit.TraitAttribute("Description", "Login as store owner")]
+        public async System.Threading.Tasks.Task LoginAsStoreOwner()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Going through a list of books", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 7
-    this.ScenarioInitialize(scenarioInfo);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Login as store owner", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 3
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -111,26 +110,47 @@ namespace Bookstore.Specifications
             else
             {
                 await this.ScenarioStartAsync();
+#line 4
+    await testRunner.GivenAsync("a store owner", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 5
+    await testRunner.WhenAsync(("the store owner logs in with the username \"owner@test.nl\" and password \"password1" +
+                        "23\""), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 6
+    await testRunner.ThenAsync("the store owner is logged in with the correct \"BookstoreOwner\" claim", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Login as customer")]
+        [Xunit.TraitAttribute("FeatureTitle", "Having the ability to login as store owner or as customer")]
+        [Xunit.TraitAttribute("Description", "Login as customer")]
+        public async System.Threading.Tasks.Task LoginAsCustomer()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Login as customer", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 8
-        await testRunner.GivenAsync("a customer, searching for books to buy", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
 #line 9
-        await testRunner.WhenAsync("the customer request the full list of books", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+    await testRunner.GivenAsync("a customer", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-                global::Reqnroll.Table table1 = new global::Reqnroll.Table(new string[] {
-                            "Title",
-                            "Author"});
-                table1.AddRow(new string[] {
-                            "The Great Gatsby",
-                            "F. Scott Fitzgerald"});
-                table1.AddRow(new string[] {
-                            "1984",
-                            "George Orwell"});
-                table1.AddRow(new string[] {
-                            "To Kill a Mockingbird",
-                            "Harper Lee"});
 #line 10
-        await testRunner.ThenAsync("the customer should find the following books:", ((string)(null)), table1, "Then ");
+    await testRunner.WhenAsync(("the customer logs in with the username \"customer@test.nl\" and password \"password1" +
+                        "23\""), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 11
+    await testRunner.ThenAsync("the customer is logged in with the correct \"Customer\" claim", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
@@ -143,12 +163,12 @@ namespace Bookstore.Specifications
             
             async System.Threading.Tasks.Task Xunit.IAsyncLifetime.InitializeAsync()
             {
-                await SearchingForBooksFeature.FeatureSetupAsync();
+                await HavingTheAbilityToLoginAsStoreOwnerOrAsCustomerFeature.FeatureSetupAsync();
             }
             
             async System.Threading.Tasks.Task Xunit.IAsyncLifetime.DisposeAsync()
             {
-                await SearchingForBooksFeature.FeatureTearDownAsync();
+                await HavingTheAbilityToLoginAsStoreOwnerOrAsCustomerFeature.FeatureTearDownAsync();
             }
         }
     }

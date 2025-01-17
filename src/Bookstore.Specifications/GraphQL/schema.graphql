@@ -1,9 +1,35 @@
 schema {
   query: Queries
+  mutation: Mutations
+}
+
+"Defines when a policy shall be executed."
+enum ApplyPolicy {
+  "Before the resolver was executed."
+  BEFORE_RESOLVER
+  "After the resolver was executed."
+  AFTER_RESOLVER
+  "The policy is applied in the validation step before the execution."
+  VALIDATION
 }
 
 type Queries {
   books: [Book!]!
+  login(email: String! password: String!): LoginPayload!
+}
+
+type Mutations {
+  addBook(bookInput: BookInput!): Book!
+}
+
+input BookInput {
+  title: String!
+  author: String!
+  isbn: String!
+}
+
+type LoginPayload {
+  token: String!
 }
 
 type Book {
