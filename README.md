@@ -51,7 +51,9 @@ Ensure you have the following installed:
 
 ### Custom WebApplicationFactory
 
-https://github.com/jacobduijzer/graphql-specifications/blob/1a5cd82becefe210e8a1d954ad1b8543787fef1f/src/Bookstore.Specifications/CustomWebApplicationFactory.cs#L10-L40
+The `CustomWebApplicationFactory` class is used to create a custom `WebApplicationFactory` for integration tests. This class is used to configure the test server with the required services and settings. It is also used to override registered services, in this case the `StockService`.
+
+https://github.com/jacobduijzer/graphql-specifications/blob/2da737cab91ecb711c024f934f127f97cb3c9c19/src/Bookstore.Specifications/CustomWebApplicationFactory.cs#L10
 
 ### Specifications
 
@@ -60,6 +62,7 @@ https://github.com/jacobduijzer/graphql-specifications/blob/1a5cd82becefe210e8a1
 - [HotChocolate Documentation](https://chillicream.com/docs/hotchocolate)
 - [Strawberry Shake Documentation](https://chillicream.com/docs/strawberryshake)
 - [Reqnroll Documentation](https://docs.reqnroll.net/)
+- [Writing integration tests in .NET](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-9.0)
 
 ## License
 
