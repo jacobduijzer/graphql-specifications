@@ -15,6 +15,11 @@ Specifications provide a structured, human-readable way to define and verify you
 - **GraphQL Service**: Built using HotChocolate, showcasing a sample domain.
 - **Specifications**: Written in plain language to describe API behavior.
 - **Reqnroll Integration**: Testing GraphQL queries and mutations against the specifications.
+- **Implemented Scenarios**:
+   - Getting all books.
+   - Searching for books by title, retrieving details, and checking stock.
+   - Logging in as an owner or customer, with scope validation in the bearer token.
+   - Adding books (restricted to logged-in store owners).
 
 ## Getting Started
 
