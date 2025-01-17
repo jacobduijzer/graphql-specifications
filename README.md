@@ -44,8 +44,9 @@ Ensure you have the following installed:
    ```
 3. Run the application:
    ```bash
-    dotnet run --project ./src/Bookstore.Specifications --no-restore
+    dotnet run --project ./src/Bookstore.Api --no-restore
     ```
+4. Open the GraphQL Playground at `https://localhost:5011/graphql` to test the queries and mutations.
    
 ### Running Tests
 
@@ -53,6 +54,20 @@ Ensure you have the following installed:
    ```bash
    dotnet test
    ```
+   
+### Query Examples
+
+#### Get all books
+
+https://github.com/jacobduijzer/graphql-specifications/blob/215341344602be22d81ba07adcb75c87a9fa2489/src/Bookstore.Specifications/GraphQL/BookQueries.graphql#L1-L8
+
+#### Search for a book by title
+
+https://github.com/jacobduijzer/graphql-specifications/blob/215341344602be22d81ba07adcb75c87a9fa2489/src/Bookstore.Specifications/GraphQL/BookQueries.graphql#L10-L22
+
+#### Login as a customer
+
+https://github.com/jacobduijzer/graphql-specifications/blob/215341344602be22d81ba07adcb75c87a9fa2489/src/Bookstore.Specifications/GraphQL/Login.graphql#L1-L5
 
 ### Custom WebApplicationFactory
 
