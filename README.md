@@ -1,3 +1,5 @@
+[![.NET](https://github.com/jacobduijzer/graphql-specifications/actions/workflows/dotnet.yml/badge.svg)](https://github.com/jacobduijzer/graphql-specifications/actions/workflows/dotnet.yml)
+
 # GraphQL Specifications with Reqnroll
 
 Welcome to the `graphql-specifications` repository! This project demonstrates how to test a GraphQL service built with [HotChocolate](https://chillicream.com/docs/hotchocolate) using specifications and behavior-driven approaches with [Reqnroll](https://github.com/reqnroll/reqnroll).
