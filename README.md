@@ -46,7 +46,7 @@ Ensure you have the following installed:
    ```bash
     dotnet run --project ./src/Bookstore.Api --no-restore
     ```
-4. Open the GraphQL Playground at `https://localhost:5011/graphql` to test the queries and mutations.
+4. Open the GraphQL Playground at [https://localhost:5011/graphql](https://localhost:5011/graphql) to test the queries and mutations.
    
 ### Running Tests
 
