@@ -51,7 +51,7 @@ Ensure you have the following installed:
 
 ### Custom WebApplicationFactory
 
-https://github.com/jacobduijzer/graphql-specifications/blob/2da737cab91ecb711c024f934f127f97cb3c9c19/src/Bookstore.Specifications/CustomWebApplicationFactory.cs#L10
+https://github.com/jacobduijzer/graphql-specifications/blob/c147825646d2ec54e3945bab5d8b41f28cfba4fc/src/Bookstore.Specifications/CustomWebApplicationFactory.cs#L40
 
 ### Specifications
 
