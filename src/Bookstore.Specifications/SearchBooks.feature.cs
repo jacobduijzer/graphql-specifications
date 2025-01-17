@@ -136,6 +136,46 @@ namespace Bookstore.Specifications
             await this.ScenarioCleanupAsync();
         }
         
+        [Xunit.SkippableFactAttribute(DisplayName="Searching books by title, getting stock information")]
+        [Xunit.TraitAttribute("FeatureTitle", "Searching for books")]
+        [Xunit.TraitAttribute("Description", "Searching books by title, getting stock information")]
+        public async System.Threading.Tasks.Task SearchingBooksByTitleGettingStockInformation()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Searching books by title, getting stock information", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 16
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 17
+        await testRunner.GivenAsync("a customer, searching for books to buy", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 18
+        await testRunner.WhenAsync("the customer is searching for books that contain \"Great\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+                global::Reqnroll.Table table2 = new global::Reqnroll.Table(new string[] {
+                            "Title",
+                            "Author"});
+                table2.AddRow(new string[] {
+                            "The Great Gatsby",
+                            "F. Scott Fitzgerald"});
+#line 19
+        await testRunner.ThenAsync("the customer should find the following books:", ((string)(null)), table2, "Then ");
+#line hidden
+#line 22
+        await testRunner.AndAsync("the stock for this book should be 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "2.0.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : object, Xunit.IAsyncLifetime

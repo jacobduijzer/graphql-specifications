@@ -13,3 +13,4 @@ Follow the steps in the [Strawberry Shake documentation](https://chillicream.com
 2: Getting data with authorization
 3: Getting nested data with resolvers
 4: Submitting data (mutations)
+5: resolver

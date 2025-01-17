@@ -1,4 +1,5 @@
-﻿using HotChocolate.Authorization;
+﻿using Bookstore.Api.Books;
+using HotChocolate.Authorization;
 
 namespace Bookstore.Api;
 

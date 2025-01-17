@@ -158,8 +158,8 @@ this.ScenarioInitialize(scenarioInfo);
     await testRunner.AndAsync("the isbn \"9780140439441\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 18
-    await testRunner.WhenAsync(("the bookstore owner is logged in with the username \"owner@test.com\" and password " +
-                        "\"password123\""), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+    await testRunner.WhenAsync(("the bookstore owner is logged in with the username \"owner@example.com\" and passwo" +
+                        "rd \"password123\""), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 19
     await testRunner.AndAsync("the bookstore owner adds a new book to the catalog", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");

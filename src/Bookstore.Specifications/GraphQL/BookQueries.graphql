@@ -6,3 +6,17 @@ query AllBooks {
         isbn
     }
 }
+
+query BooksByTitle($titleSearch: String!) {
+    books(where:  {
+        title:  {
+            contains: $titleSearch
+        }
+    }) {
+        id
+        title
+        author
+        isbn
+        stock
+    }
+}

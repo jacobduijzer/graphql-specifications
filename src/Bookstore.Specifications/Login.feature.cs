@@ -114,8 +114,8 @@ this.ScenarioInitialize(scenarioInfo);
     await testRunner.GivenAsync("a store owner", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
 #line 5
-    await testRunner.WhenAsync(("the store owner logs in with the username \"owner@test.nl\" and password \"password1" +
-                        "23\""), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+    await testRunner.WhenAsync(("the store owner logs in with the username \"owner@example.com\" and password \"passw" +
+                        "ord123\""), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 6
     await testRunner.ThenAsync("the store owner is logged in with the correct \"BookstoreOwner\" claim", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
@@ -146,8 +146,8 @@ this.ScenarioInitialize(scenarioInfo);
     await testRunner.GivenAsync("a customer", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
 #line 10
-    await testRunner.WhenAsync(("the customer logs in with the username \"customer@test.nl\" and password \"password1" +
-                        "23\""), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+    await testRunner.WhenAsync(("the customer logs in with the username \"customer@example.com\" and password \"passw" +
+                        "ord123\""), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 11
     await testRunner.ThenAsync("the customer is logged in with the correct \"Customer\" claim", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");

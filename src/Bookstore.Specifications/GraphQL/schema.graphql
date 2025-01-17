@@ -3,6 +3,14 @@ schema {
   mutation: Mutations
 }
 
+type Book {
+  stock: Int!
+  id: UUID!
+  title: String!
+  isbn: String!
+  author: String!
+}
+
 "Defines when a policy shall be executed."
 enum ApplyPolicy {
   "Before the resolver was executed."
@@ -14,12 +22,53 @@ enum ApplyPolicy {
 }
 
 type Queries {
-  books: [Book!]!
+  books(where: BookFilterInput): [Book!]!
   login(email: String! password: String!): LoginPayload!
 }
 
 type Mutations {
   addBook(bookInput: BookInput!): Book!
+}
+
+scalar UUID
+
+input BookFilterInput {
+  and: [BookFilterInput!]
+  or: [BookFilterInput!]
+  id: UuidOperationFilterInput
+  title: StringOperationFilterInput
+  isbn: StringOperationFilterInput
+  author: StringOperationFilterInput
+}
+
+input UuidOperationFilterInput {
+  eq: UUID
+  neq: UUID
+  in: [UUID]
+  nin: [UUID]
+  gt: UUID
+  ngt: UUID
+  gte: UUID
+  ngte: UUID
+  lt: UUID
+  nlt: UUID
+  lte: UUID
+  nlte: UUID
+}
+
+input StringOperationFilterInput {
+  and: [StringOperationFilterInput!]
+  or: [StringOperationFilterInput!]
+  eq: String
+  neq: String
+  contains: String
+  ncontains: String
+  in: [String]
+  nin: [String]
+  startsWith: String
+  nstartsWith: String
+  endsWith: String
+  nendsWith: String
 }
 
 input BookInput {
@@ -32,11 +81,5 @@ type LoginPayload {
   token: String!
 }
 
-type Book {
-  id: UUID!
-  title: String!
-  isbn: String!
-  author: String!
-}
-
-scalar UUID
+"The purpose of the `cost` directive is to define a `weight` for GraphQL types, fields, and arguments. Static analysis can use these weights when calculating the overall cost of a query or response."
+directive @cost("The `weight` argument defines what value to add to the overall cost for every appearance, or possible appearance, of a type, field, argument, etc." weight: String!) on SCALAR | OBJECT | FIELD_DEFINITION | ARGUMENT_DEFINITION | ENUM | INPUT_FIELD_DEFINITION

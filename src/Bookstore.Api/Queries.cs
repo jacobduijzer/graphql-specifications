@@ -1,8 +1,11 @@
-﻿namespace Bookstore.Api;
+﻿using Bookstore.Api.Books;
+
+namespace Bookstore.Api;
 
 public class Queries(BookCatalogService books, IdentityService identity)
 {
-    public IEnumerable<Book> Books() => books.Books();
+    [UseFiltering]
+    public IQueryable<Book> Books() => books.Books();
 
     public LoginPayload Login(string email, string password)
     {
