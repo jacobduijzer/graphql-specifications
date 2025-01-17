@@ -94,6 +94,7 @@ https://github.com/jacobduijzer/graphql-specifications/blob/04cf32d2b920167eef2f
 - [HotChocolate Documentation](https://chillicream.com/docs/hotchocolate)
 - [Strawberry Shake Documentation](https://chillicream.com/docs/strawberryshake)
 - [Reqnroll Documentation](https://docs.reqnroll.net/)
+- [Gherkin Language Reference](https://cucumber.io/docs/gherkin/)
 - [Writing integration tests in .NET](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-9.0)
 
 ## License
