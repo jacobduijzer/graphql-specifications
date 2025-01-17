@@ -1,3 +1,5 @@
+[![.NET](https://github.com/jacobduijzer/graphql-specifications/actions/workflows/dotnet.yml/badge.svg)](https://github.com/jacobduijzer/graphql-specifications/actions/workflows/dotnet.yml)
+
 # GraphQL Specifications with Reqnroll
 
 Welcome to the `graphql-specifications` repository! This project demonstrates how to test a GraphQL service built with [HotChocolate](https://chillicream.com/docs/hotchocolate) using specifications and behavior-driven approaches with [Reqnroll](https://github.com/reqnroll/reqnroll).
@@ -77,11 +79,24 @@ https://github.com/jacobduijzer/graphql-specifications/blob/0c4f80febe83d566fa86
 
 ### Specifications
 
+#### Login
+
+https://github.com/jacobduijzer/graphql-specifications/blob/04cf32d2b920167eef2f8944e7f9f623c0255411/src/Bookstore.Specifications/Login.feature#L1-L11
+
+#### Search for books
+
+https://github.com/jacobduijzer/graphql-specifications/blob/04cf32d2b920167eef2f8944e7f9f623c0255411/src/Bookstore.Specifications/SearchBooks.feature#L1-L22
+
+#### Add books
+
+https://github.com/jacobduijzer/graphql-specifications/blob/04cf32d2b920167eef2f8944e7f9f623c0255411/src/Bookstore.Specifications/AddBooks.feature#L1-L21
+
 ## Links
 
 - [HotChocolate Documentation](https://chillicream.com/docs/hotchocolate)
 - [Strawberry Shake Documentation](https://chillicream.com/docs/strawberryshake)
 - [Reqnroll Documentation](https://docs.reqnroll.net/)
+- [Gherkin Language Reference](https://cucumber.io/docs/gherkin/)
 - [Writing integration tests in .NET](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-9.0)
 
 ## License
