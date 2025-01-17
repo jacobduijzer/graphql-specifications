@@ -65,7 +65,7 @@ https://github.com/jacobduijzer/graphql-specifications/blob/215341344602be22d81b
 
 https://github.com/jacobduijzer/graphql-specifications/blob/215341344602be22d81ba07adcb75c87a9fa2489/src/Bookstore.Specifications/GraphQL/BookQueries.graphql#L10-L22
 
-#### Login as a customer
+#### Login 
 
 https://github.com/jacobduijzer/graphql-specifications/blob/215341344602be22d81ba07adcb75c87a9fa2489/src/Bookstore.Specifications/GraphQL/Login.graphql#L1-L5
 
